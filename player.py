@@ -20,27 +20,10 @@ def getVideos():
 
 def playVideos():
     global videos
-    if len(videos) == 0:
-        getVideos()
-        # time.sleep(5)
-        return
+    if len(videos) == 0: getVideos()
     
     # Start at a random episode and continue from there
     __num = random.randint(0, len(videos)-1)
-    print(
-        f"__num: {__num}\n"
-        f"videos: {len(videos)}\n"
-    )
-    
-
-    print(
-        f"{videos[__num - 1]}\n"
-        f"{videos[__num]}\n"
-        f"{videos[__num + 1]}\n"
-    )
-    
-    for video in videos:
-        print(video)
     
     # Play videos in order from random starting episode
     while True:
